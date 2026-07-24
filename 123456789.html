@@ -1,0 +1,65 @@
+<style>
+  /* این ظرف فقط برای چیدن ۳ آیتم کنار هم است */
+  .row-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* یعنی ۳ ستون برابر */
+    gap: 20px; /* فاصله بین آیتم‌ها */
+  }
+
+  .item-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+</style>
+
+<div class="row-container">
+  
+  <!-- کارت ۱ -->
+  <div class="item-card" onclick="toggleDetails(this)">
+    <img src="image1.jpg" width="100%">
+    <h3>عنوان اول</h3>
+    <div class="details" style="display:none;">توضیحات اول اینجاست...</div>
+  </div>
+
+  <!-- کارت ۲ -->
+  <div class="item-card" onclick="toggleDetails(this)">
+    <img src="image2.jpg" width="100%">
+    <h3>عنوان دوم</h3>
+    <div class="details" style="display:none;">توضیحات دوم اینجاست...</div>
+  </div>
+
+  <!-- کارت ۳ -->
+  <div class="item-card" onclick="toggleDetails(this)">
+    <img src="image3.jpg" width="100%">
+    <h3>عنوان سوم</h3>
+    <div class="details" style="display:none;">توضیحات سوم اینجاست...</div>
+  </div>
+    <div class="item-card" onclick="toggleDetails(this)">
+    <img src="image3.jpg" width="100%">
+    <h3>عنوان سوم</h3>
+    <div class="details" style="display:none;">توضیحات سوم اینجاست...</div>
+  </div>
+    <div class="item-card" onclick="toggleDetails(this)">
+    <img src="image3.jpg" width="100%">
+    <h3>عنوان سوم</h3>
+    <div class="details" style="display:none;">توضیحات سوم اینجاست...</div>
+  </div>
+    <div class="item-card" onclick="toggleDetails(this)">
+    <img src="image3.jpg" width="100%">
+    <h3>عنوان سوم</h3>
+    <div class="details" style="display:none;">توضیحات سوم اینجاست...</div>
+  </div>
+
+</div>
+
+<script>
+  function toggleDetails(element) {
+    // پیدا کردن بخش جزئیات داخل همین کارتی که روی آن کلیک شده
+    const details = element.querySelector('.details');
+    // تغییر وضعیت نمایش
+    details.style.display = (details.style.display === "block") ? "none" : "block";
+  }
+</script>
+
